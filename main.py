@@ -56,11 +56,12 @@ def is_real_email(email, domain):
 def generate_email_variations(first_name, last_name, domain):
     variations = [
         f"{first_name}{last_name}@{domain}",
+        f"{first_name[0]}{last_name}@{domain}",
         f"{first_name}{last_name[0]}@{domain}",
         f"{last_name}{first_name}@{domain}",
         f"{last_name[0]}{first_name}@{domain}",
         f"{last_name}{first_name[0]}@{domain}",
-        f"{first_name[0]}{last_name}@{domain}",
+        f"{last_name}@{domain}",
     ]
     return variations
 
